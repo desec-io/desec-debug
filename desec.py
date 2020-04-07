@@ -19,8 +19,8 @@ frontend_servers = {
         'lax-1.b.desec.io',
         'nyc-1.b.desec.io',
         'dfw-1.a.desec.io',
-        # 'gru-1.a.desec.io',  # TODO see what's the true name of this server
-        # 'gru-1.b.desec.io',  # TODO see what's the true name of this server
+        'sao-1.a.desec.io',
+        'sao-1.b.desec.io',
         'scl-1.b.desec.io',
         'syd-1.a.desec.io',
         'syd-1.b.desec.io',
