@@ -23,7 +23,11 @@ def _worker():
 
 
 def _do_work(callback, kwargs):
-    response = dns.query.udp(**kwargs)
+    kwargs.setdefault('timeout', 2)
+    try:
+        response = dns.query.udp(**kwargs)
+    except dns.exception.Timeout:
+        response = '(No response before timeout)'
     if callback:
         callback(response, **kwargs)
 

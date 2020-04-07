@@ -24,6 +24,8 @@ def all_equal(l):
 def filter_query_rrset(response, qname, qtype):
     try:
         return response.find_rrset(dns.message.ANSWER, qname, dns.rdataclass.IN, qtype)
+    except AttributeError:
+        return response
     except KeyError:
         return None
 
